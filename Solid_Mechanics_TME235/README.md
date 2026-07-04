@@ -28,16 +28,13 @@ Steel beam supported by a compressible neo-Hookean rubber block, modeled in Abaq
 - CA4: the rubber support reduced beam-tip deflection by ~73% compared to an unsupported cantilever (64 mm vs. 235 mm under a 10 kN load)
 
 ## Repository Structure
+'''
 solid-mechanics-tme235/
 ├── report/               Full write-ups with methodology, plots, and discussion
-
 ├── src/                  Python scripts for each assignment (CA1-CA4)
-
 ├── data/                 Abaqus-exported CSV/TXT data used for comparison plots
-
 ├── results/              Key output plots and Abaqus contour screenshots
-
 └── problem_statements/   Original assignment briefs
-
+'''
 ## Notes
 Co-authored with Tapasi Himanth Karthik as part of coursework requirements for TME235, Chalmers University of Technology (Autumn 2024).
