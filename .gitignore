@@ -1,0 +1,17 @@
+# MATLAB
+*.asv
+*.m~
+*.mex*
+slprj/
+codegen/
+*.autosave
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS/Editor junk
+.DS_Store
+Thumbs.db
+.vscode/
