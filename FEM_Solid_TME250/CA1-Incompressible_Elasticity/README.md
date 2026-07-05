@@ -1,6 +1,6 @@
 # CA1 — Incompressible Elasticity (TME250)
 
-Solo assignment. Report: `report/TME250_CA1.pdf`.
+Report: `report/TME250_CA1.pdf`.
 
 ## Summary
 
