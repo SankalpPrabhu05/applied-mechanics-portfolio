@@ -53,7 +53,7 @@ report (`report/TME245_CA1_Group27.pdf`).
 CA1-large-deformation/
 ├── README.md
 ├── report/
-│   └── TME245_CA1_Group27.pdf
+│   └── TME245_CA1.pdf
 ├── src/
 │   ├── scripts/
 │   │   ├── CA1_T2A.m                           # Newton-Raphson linear elastic verification
