@@ -35,8 +35,8 @@ Structure is adapted per course/assignment based on how similar the individual C
 ## Dependencies and Code Availability
 
 - **CALFEM**: several scripts call functions from [CALFEM](https://github.com/CALFEM/calfem-matlab), an open-source MATLAB toolbox for FE analysis developed at Lund University. These calls are included as-is; CALFEM itself is not bundled here and should be installed separately to run the code.
-- **Course-provided routines**: some functions (e.g. mesh generators, load-application helpers) were provided by course instructors and are **not included** in this repository, pending instructor permission to publish. As a result, most scripts here will not run standalone, even with CALFEM installed — each assignment's README lists the specific excluded functions.
-- Only functions/scripts that appear explicitly in the report appendices are included, since these represent work authored (or explicitly reproduced with attribution) for the assignment.
+- **Course-provided routines**: some functions (e.g. mesh generators, load-application helpers) were provided by course instructors and are **not included** in this repository. As a result, most scripts here will not run standalone, even with CALFEM installed — each assignment's README lists the specific excluded functions.
+- Only functions/scripts that appear explicitly in the report appendices are included, since these represent work authored for the assignment.
 - Some assignments were completed with a co-author (noted per course/CA); solo work is noted where applicable.
 
 ## License
