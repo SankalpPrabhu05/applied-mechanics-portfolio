@@ -61,21 +61,25 @@ Full discussion, derivations, and figures are in the report
 CA2-kirchhoff-plate/
 ├── README.md
 ├── report/
-│   └── TME245_CA2_Group27.pdf
+│   └── TME245_CA2.pdf
 ├── src/
-│   ├── scripts/
-│   │   ├── task1c_solve_displacements.m    # Full FE solve: in-plane + out-of-plane
-│   │   ├── task1d_stress_function.m        # In-plane stress + Von Mises/FoS (K_inplane_S)
-│   │   ├── task2a_geometric_stiffness.m    # Geometric stiffness matrix (Kirch_G)
-│   │   └── task2b_buckling_problem.m       # Full linearized pre-buckling analysis
-│   └── functions/
-│       ├── kirchhoff_element_routine.m     # Full_KQuad_Func — membrane + bending element
-│       ├── kirchhoff_bmatrix_derivation.m  # Symbolic derivation: Nk_func, Be_kirch_func,
-│       │                                    #   Bast_kirchoff_func
-│       └── quad_bmatrix_derivation.m       # Symbolic derivation: Be_Quad_func (membrane B0)
-├── data/                                   # Mesh/topology files, if available
-├── results/                                # Exported figures (PNG)
-└── problem_statements/                     # Not available for this assignment
+│   ├── CA2_Task_1_Kirchoff_Plate.m      # Task 1B-1D: element routine verification,
+│   │                                    #   displacement solve, in-plane stress + Von
+│   │                                    #   Mises/FoS computation
+│   ├── CA2_Task_2_Buckling_Problem.m    # Task 2A-2B: geometric stiffness assembly +
+│   │                                    #   generalized eigenvalue buckling solve
+│   ├── Full_KQuad_Func.m                # Kirchhoff plate element routine (membrane +
+│   │                                    #   bending stiffness, external forces)
+│   ├── K_inplane_S.m                    # In-plane stress computation (Gauss point
+│   │                                    #   averaged, Voigt form)
+│   ├── Kirch_G.m                        # Geometric stiffness matrix (3x3 Gauss scheme)
+│   ├── Be_Quad_Symb2Func.m              # Symbolic derivation -> membrane B0-matrix
+│   │                                    #   function (Be_Quad_func)
+│   └── Bstar_KQuad_Symb2Func.m          # Symbolic derivation -> Kirchhoff bending
+│                                        #   B*-matrix function (Bast_kirchoff_func,
+│                                        #   Nk_func, Be_kirch_func)
+├── results/                             # Exported figures (PNG)
+└── problem_statements/               
 ```
 
 ## Dependencies / What Won't Run Standalone
