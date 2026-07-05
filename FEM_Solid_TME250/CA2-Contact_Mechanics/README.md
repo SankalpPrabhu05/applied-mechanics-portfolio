@@ -14,12 +14,22 @@ Solo assignment. Report: `report/TME250_CA2.pdf`.
   CFL-compliant stable case. Compares energy conservation, contact force history, and
   stability behavior across schemes.
 
-## Contents
+## File Structure
 
-- `src/scripts/` — main driver scripts, one per scenario (quasi-static, implicit dynamic
-  without/with contact, explicit dynamic)
-- `src/functions/` — `gap_lin.m` (linearized gap function / contact normal computation)
-- `problem_statements/` — assignment brief (add if available)
+```
+CA2-Contact_Mechanics/
+├── README.md
+├── report/
+│   └── TME250_CA2.pdf
+├── src/
+│   ├── Scenario_1_Quassi_Static_Contact.m       # Quasi-static cylinder indentation via Lagrange-multiplier active-set contact
+│   ├── Scenario_2_Implicit_without_Contact.m    # Implicit dynamics sanity check: free oscillation, no contact, energy conservation
+│   ├── Scenario_2_Implicit_with_Contact.m       # Implicit dynamics + active-set contact: impact, rebound, multi-cycle contact-separation
+│   ├── Scenario_2_Explicit_Dynamics.m           # Explicit dynamics with contact: unstable large-dt vs. CFL-stable small-dt cases
+│   └── gap_lin.m                                # Linearized gap function and contact normal for cylinder-node contact
+├── results/                                     # Exported figures (PNG)
+└── problem_statements/                        
+```
 
 ## Dependencies / what's excluded
 
