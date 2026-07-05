@@ -1,6 +1,6 @@
-# CA2 — Contact Mechanics (TME250)
+# CA3 — Adaptive Mesh FE Analysis (TME250)
 
-Solo assignment. Report: `report/TME250_CA2.pdf`.
+Report: `report/TME250_CA3.pdf`.
 
 ## Summary
 
@@ -24,10 +24,26 @@ Solo assignment. Report: `report/TME250_CA2.pdf`.
   of freedom.
 ## Contents
 
-- `src/scripts/` — main driver scripts, one per scenario (quasi-static, implicit dynamic
-  without/with contact, explicit dynamic)
-- `src/functions/` — `gap_lin.m` (linearized gap function / contact normal computation)
-- `problem_statements/` — assignment brief (add if available)
+```
+CA2-Contact_Mechanics/
+├── README.md
+├── report/
+│   └── TME250_CA3.pdf
+├── src/
+│   ├── scripts/
+│   │   ├── Task1_Manufactured_Body_Force_Distribution.m     # Symbolic manufactured displacement field, strains/stresses, exact energy norm, generates Body_force.m
+│   │   ├── Task2_Error_behavior_with_Mesh_refinement.m      # Convergence study: relative error vs. ndof over 11 uniform refinements, linear vs. quadratic elements
+│   │   ├── Task3_effective_index_of_error_estimator.m       # Estimates error via linear-vs-quadratic solution gap on same mesh; tracks effectivity index η with refinement
+│   │   └── Task4_Adaptive_mesh_refinement.m                 # Threshold-based adaptive refinement vs. uniform refinement
+│   └── functions/
+│       ├── Force_exact_solution.m                           # Body force vector for linear (3-node) triangular elements via Gauss quadrature
+│       ├── Force_exact_quad_solution.m                      # Body force vector for quadratic (6-node) triangular elements via Gauss quadrature
+│       ├── Gauss_points.m                                   # Symbolic generator for the linear element isoparametric map (produces Gauss.m)
+│       ├── Gauss_points_quadratic.m                         # Symbolic generator for the quadratic element isoparametric map (produces Gauss_quad.m)
+│       └── quiver_body_force.m                              # Visualizes the manufactured body force field (magnitude contour + direction quiver)
+├── results/                                                 # Exported figures (PNG)
+└── problem_statements/                        
+```
 
 ## Dependencies / what's excluded
 

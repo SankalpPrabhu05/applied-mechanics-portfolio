@@ -1,6 +1,6 @@
 # CA1 — Incompressible Elasticity (TME250)
 
-Solo assignment. Report: `report/TME250_CA1.pdf`.
+Report: `report/TME250_CA1.pdf`.
 
 ## Summary
 
@@ -14,14 +14,26 @@ Solo assignment. Report: `report/TME250_CA1.pdf`.
   same two load cases, demonstrating stable, smooth pressure fields all the way to
   ν = 0.5 (fully incompressible), in contrast to Task 2.
 
-## Contents
+## File Structure
 
-- `src/scripts/` — main driver scripts for Task 2 (CST) and Task 3 (Taylor-Hood)
-- `src/functions/` — `Loadvector_interpolation.m` (linear edge load interpolation),
-  `Taylor_hood.m` (Taylor-Hood element stiffness routine), and its symbolic-derivation
-  supporting script
-- `problem_statements/` — assignment brief (add if available)
-
+```
+CA1-large-deformation/
+├── README.md
+├── report/
+│   └── TME250_CA1.pdf
+├── src/
+│   ├── scripts/
+│   │   ├── Task3_Taylor_hood_element.m               # Taylor-Hood mixed element: mesh convergence + pressure field for nu -> 0.5
+│   │   └── Task2_CST_element.m                       # CST element: mesh convergence + checkerboard pressure field for nu -> 0.5
+│   └── functions/
+│       ├── Be_Taylor_Hood_implementation.m           # Symbolic derivation of Taylor-Hood element formulation
+│       ├── Be_Taylor_hood.m                          # Taylor-Hood element formulation
+│       ├── Loadvector_interpolation.m                # Unit edge load vector for linear (CST) boundary segments
+│       ├── Loadvector_interpolation_Taylor_hood.m    # Unit edge load vector for quadratic (TRIA6) boundary segments
+│       └── Taylor_hood.m                             # TRIA6/P1 mixed element stiffness routine (nearly/fully incompressible elasticity)
+├── results/                                          # Exported figures (PNG)
+└── problem_statements/                        
+```
 ## Dependencies / what's excluded
 
 - `hooke.m`, `plante.m`, `plants.m` are **CALFEM** functions (open-source) — referenced
