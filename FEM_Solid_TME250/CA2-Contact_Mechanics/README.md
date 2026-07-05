@@ -1,6 +1,6 @@
 # CA2 — Contact Mechanics (TME250)
 
-Solo assignment. Report: `report/TME250_CA2.pdf`.
+Report: `report/TME250_CA2.pdf`.
 
 ## Summary
 
