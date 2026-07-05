@@ -56,18 +56,17 @@ CA1-large-deformation/
 │   └── TME245_CA1_Group27.pdf
 ├── src/
 │   ├── scripts/
-│   │   ├── task2a_iterative_linear_elastic.m   # Newton-Raphson linear elastic verification
-│   │   ├── task2b_yeoh_vs_neohooke.m           # Stress-stretch model comparison
-│   │   ├── task2c_tria6_test.m                 # TRIA6 element routine verification
-│   │   └── task2d_rubber_profile_yeoh.m        # Full nonlinear rubber profile analysis
+│   │   ├── CA1_T2A.m                           # Newton-Raphson linear elastic verification
+│   │   ├── CA1_T2B.m                           # Stress-stretch model comparison
+│   │   ├── CA1_T2C.m                           # TRIA6 element routine verification
+│   │   └── CA1_T2D_Coarse_Compression.m        # Full nonlinear rubber profile analysis
 │   └── functions/
 │       ├── NH_func.m                           # Neo-Hookean stress/tangent (symbolic-derived)
 │       ├── Yeoh_func_S33.m                     # Yeoh stress/tangent (symbolic-derived)
-│       ├── Be0_TRIA6_derivation.m              # Symbolic derivation of TRIA6 B0-matrix
+│       ├── Be0_TRIA6_func.m                    # Symbolic derivation of TRIA6 B0-matrix
 │       └── TRIA6_LDef.m                        # TRIA6 large-deformation element routine
-├── data/                                       # Mesh/topology .mat files
 ├── results/                                    # Exported figures (PNG)
-└── problem_statements/                         # Not available for this assignment
+└── problem_statements/                        
 ```
 
 ## Dependencies / What Won't Run Standalone
@@ -78,7 +77,6 @@ CA1-large-deformation/
   here — install CALFEM separately if attempting to run this code.
 - **Course-provided files** (e.g. mesh/topology generation such as
   `topology_coarse_3node.mat`, `topology_medium_6node.mat`, and any associated mesh-import
-  routines) were supplied by the course instructor and are excluded pending permission to
-  publish. Without these, the scripts will not run standalone.
+  routines) were supplied by the course instructor and are excluded. Without these, the scripts will not run standalone.
 - Only the functions and scripts explicitly listed in the report's appendices (A and B)
   are included in `src/`.
